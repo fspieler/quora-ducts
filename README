@@ -1,0 +1,43 @@
+Quora programming challenge 1: Duct-cooling
+Frederic Spieler, Feb 27 2012
+E-mail : fred@fredspieler.com
+Web    : hire.fredspieler.com
+
+-----------------------------------------------------------------------
+Files included in spieler_duct.tar:
+-README (this file)
+-input (the test input provided by Quora)
+-source.c (the sole C source file)
+-makefile (VERY simple makefile)
+
+-----------------------------------------------------------------------
+Linux instructions:
+
+How to compile:
+make
+
+How to run:
+cat <input file> | ./duct
+
+-----------------------------------------------------------------------
+Other instructions:
+
+There are primary two possible changes one could make to the C source
+file: enabling the timer and enabling the continuity assumption (see
+source file for more explanation).
+
+The timer can be enabled by changing line 18 to
+#define TIMER ON
+
+The continuity optimization can be enabled by changing line 19 to
+#define CONT_OPT ON
+
+-----------------------------------------------------------------------
+Results:
+
+size 7x8 (test input given by Quora, in file named "input")
+Solution     : 301716 paths
+
+On Core2 T5300 @ 1.73 GHz, running Ubuntu 11.10, single trial time:
+CONT_OPT on  : 1.630666 s
+CONT_OPT off : 2.066694 s
